@@ -19,6 +19,7 @@ import com.example.btl_api.data.OnFetchDataListener;
 import com.example.btl_api.data.RequestManager;
 import com.example.btl_api.data.SelectListener;
 import com.example.btl_api.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
@@ -34,7 +35,17 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        setListener();
+        dialog = new ProgressDialog(this);
+        showDialog("Fetching news articles..");
 
+        initCategoryListener();
+
+        RequestManager manager = new RequestManager(this);
+        manager.getNewsHeadlines(listener, "general", null);
+    }
+
+    private void setListener() {
         binding.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -53,15 +64,21 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
             }
         });
 
-        dialog = new ProgressDialog(this);
-        dialog.setTitle("Fetching news articles..");
-        dialog.show();
+        binding.logoutBtn.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            Intent it = new Intent(this, SignInActivity.class);
+            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(it);
+            finish();
+        });
 
-        initCategoryListener();
-
-        RequestManager manager = new RequestManager(this);
-        manager.getNewsHeadlines(listener, "general", null);
     }
+
+    private void showDialog(String mess) {
+        dialog.setTitle(mess);
+        dialog.show();
+    }
+
 
     private void initCategoryListener() {
         binding.btn1.setOnClickListener(this);

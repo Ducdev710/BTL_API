@@ -10,8 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.btl_api.R;
 
-import java.util.Calendar;
-
 public class CustomViewHolder extends RecyclerView.ViewHolder {
     TextView text_title, text_source;
     ImageView img_headlines;

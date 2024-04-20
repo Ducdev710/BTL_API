@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.btl_api.model.NewsHeadlines;
 import com.example.btl_api.R;
 import com.example.btl_api.data.SelectListener;
+import com.example.btl_api.model.NewsHeadlines;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

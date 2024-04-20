@@ -2,6 +2,7 @@ package com.example.btl_api.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.btl_api.model.NewsHeadlines;
@@ -21,6 +22,14 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         headlines = (NewsHeadlines) getIntent().getSerializableExtra("data");
         initContent();
+        setListener();
+    }
+
+    private void setListener() {
+//        binding.backBtn.setOnClickListener(v -> {
+//            BackStac
+//            startActivity(new Intent(this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+//        });
     }
 
     private void initContent() {

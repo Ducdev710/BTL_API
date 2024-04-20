@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "783776525179",
+    "project_id": "btl-api-afa8c",
+    "storage_bucket": "btl-api-afa8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783776525179:android:3fa93e81e13b1901aeabde",
+        "android_client_info": {
+          "package_name": "com.example.btl_api"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB85RV5VGNdfjeu7giP7T0EH3RRRbzcAKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

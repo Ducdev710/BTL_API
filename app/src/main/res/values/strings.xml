@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">BTL-API</string>
     <string name="api_key">214c918b6fa54e3cb4c05e76a18888cd</string>
+
+    <string name="app_name">NewsApp</string>
+
+    <string name="login_label">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_account">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>
