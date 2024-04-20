@@ -1,10 +1,10 @@
-package com.example.btl_api;
+package com.example.btl_api.data;
 
 import android.content.Context;
 import android.widget.Toast;
 
-import com.example.btl_api.Models.NewsApiResponse;
-import com.example.btl_api.Models.NewsHeadlines;
+import com.example.btl_api.R;
+import com.example.btl_api.model.NewsApiResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

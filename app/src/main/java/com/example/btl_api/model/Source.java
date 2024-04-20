@@ -1,6 +1,8 @@
-package com.example.btl_api.Models;
+package com.example.btl_api.model;
 
-public class Source {
+import java.io.Serializable;
+
+public class Source implements Serializable {
     String id= "";
     String name= "";
 

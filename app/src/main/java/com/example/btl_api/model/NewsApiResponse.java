@@ -1,8 +1,9 @@
-package com.example.btl_api.Models;
+package com.example.btl_api.model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class NewsApiResponse {
+public class NewsApiResponse implements Serializable {
     String status = "";
     int totalResults;
     List<NewsHeadlines> articles;

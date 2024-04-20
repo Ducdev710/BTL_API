@@ -1,6 +1,8 @@
-package com.example.btl_api.Models;
+package com.example.btl_api.model;
 
-public class NewsHeadlines {
+import java.io.Serializable;
+
+public class NewsHeadlines implements Serializable {
     Source source = null;
     String author = "";
     String title = "";

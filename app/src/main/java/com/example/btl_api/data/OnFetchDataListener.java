@@ -1,6 +1,6 @@
-package com.example.btl_api;
+package com.example.btl_api.data;
 
-import com.example.btl_api.Models.NewsHeadlines;
+import com.example.btl_api.model.NewsHeadlines;
 
 import java.util.List;
 
